@@ -4,7 +4,7 @@ Given a bunch of CSV files inside a directory, the code will be able to take all
 
 # Pre-requirement
 
-* Python-3 needs to be installed in your device (Check [https://www.python.org/downloads/](here) if you don't have python installed)
+* Python-3 needs to be installed in your device (Check [https://www.python.org/downloads/](here) ) if you don't have python installed)
 
 # Instruction
 
