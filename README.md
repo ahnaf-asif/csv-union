@@ -31,4 +31,4 @@ Given a bunch of CSV files inside a directory, the code will be able to take all
 | University      | People      | Size  | Good Stuff                                     |
 | --------------- | ----------- | ----- | ---------------------------------------------- |
 | Stanford University       | 4990        | Large | Literally one of the best schools in the world <br> Amazing people |
-| Amherst College | 234 <br> 450 | Large | Need Blind LAC <br> Amazing Courses
+| Amherst College | 234 <br> 450 | Large | Need Blind LAC <br> Amazing Courses |
