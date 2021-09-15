@@ -20,11 +20,15 @@ Given a bunch of CSV files inside a directory, the code will be able to take all
 
 | University      | People      | Size  | Good Stuff                                     |
 | --------------- | ----------- | ----- | ---------------------------------------------- |
-| Stanford        | 4990        | Large | Literally one of the best schools in the world |
-| Stanford        | 4900        | Large | Amazing people                                 |
+| Stanford University        | 4990        | Large | Literally one of the best schools in the world |
+| Stanford University        | 4900        | Large | Amazing people                                 |
+| Amherst College | 234 | Large | Need Blind LAC |
+| Amherst College | 450 | Large | Amazing Courses |
+
 
 ### After running filter_all_rows, the above spreadsheet will look like this:
 
 | University      | People      | Size  | Good Stuff                                     |
 | --------------- | ----------- | ----- | ---------------------------------------------- |
-| Stanford        | 4990        | Large | Literally one of the best schools in the world <br> Amazing people |
+| Stanford University       | 4990        | Large | Literally one of the best schools in the world <br> Amazing people |
+| Amherst College | 234 <br> 450 | Large | Need Blind LAC <br> Amazing Courses
