@@ -4,7 +4,7 @@ import csv
 def set_all_rows(directory):
     """
         input: given a directory name
-        output: the code will take all the csv files, turn every row into a dictionary and append that to a list. Then the list will be returned
+        output: the code will take all the csv files inside the directory and turn every row into a dictionary and append that to a list. Then the list will be returned
     """
     all_rows = []
     for file in os.listdir(directory):
@@ -17,6 +17,10 @@ def set_all_rows(directory):
     return all_rows
 
 def filter_rows(rows, all_columns, main_column):
+    """
+        input: initial rows, all columns that need to be scrapped, and the main column based on which the rows will be filtered
+        output: a list of filtered dictionary
+    """
     filtered_rows = []
     for entry in rows:
         already_in = False
@@ -35,6 +39,10 @@ def filter_rows(rows, all_columns, main_column):
     return filtered_rows
 
 def generate_csv_from_data(output_csv_file, csv_columns, dict_data):
+    """
+        input: output csv file name, all the columns that need to be written, the list of the dictionaries
+        output: it'll write a csv named output_csv_file and write all the data there
+    """
     try:
         with open(output_csv_file, 'w', newline='') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
