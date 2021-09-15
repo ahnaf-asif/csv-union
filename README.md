@@ -31,7 +31,7 @@ After finishing all the modifications, open a terminal/cmd and go to the root di
 
 | University      | People      | Size  | Good Stuff                                     |
 | --------------- | ----------- | ----- | ---------------------------------------------- |
-| Stanford University        | 4990        | Large | Literally one of the best schools in the world |
+| Stanford University        | 4900        | Large | Literally one of the best schools in the world |
 | Stanford University        | 4900        | Large | Amazing people                                 |
 | Amherst College | 234 | Large | Need Blind LAC |
 | Amherst College | 450 | Large | Amazing Courses |
