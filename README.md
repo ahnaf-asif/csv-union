@@ -14,7 +14,18 @@ Given a bunch of CSV files inside a directory, the code will be able to take all
 
 * `set_all_rows` function takes the `directory_name` and scraps all the entries from all the csv files inside that directory and returns a list of dictionaries in `rows` variable (You probably don't need to edit that line)
 
-* `filter_all_rows` will take 3 parameters, initially scrapped list (in this case the `row` variable), The columns you need to consider, and the main column that'll be used to filter the rows. So, suppose your `main_column` name is 'University'. Now, if two rows have exactly the same University, only one entry will be pushed. Any duplicates will be ignored. And if any column of this two entries have different entries, it'll store those entries with a newline. The following example should clarify everything.
+* `filter_all_rows` will take 3 parameters, initially scrappeond list (in this case the `row` variable), The columns you need to consider, and the main column that'll be used to filter the rows. So, suppose your `main_column` name is 'University'. Now, if two rows have exactly the same University, only one entry will be pushed. Any duplicates will be ignored. And if any column of this two entries have different entries, it'll store those entries with a newline. The following example should clarify everything. **I've given an example later in the docs, hope it'll make sense then.**
+
+* After filtering the rows, just specify the output csv file and generaet csv from data where you'll give the output csv file name, columns and the filtered_rows and it'll create a csv file and put all the filtered_rows data there. **All the functions are inside `csv_union.py` in case you want to read them**
+
+# Running the code
+
+After finishing all the modifications, open a terminal/cmd and go to the root directory and run the following command: 
+
+* for mac/linux, run `python3 main.py`
+* for windows, run `python main.py`
+
+# Example
 
 ### Imagine these are the initial rows and you want to filter the rows by University
 
