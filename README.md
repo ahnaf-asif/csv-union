@@ -48,3 +48,70 @@ After finishing all the modifications, open a terminal/cmd and go to the root di
 | Stanford University       | 4990        | Large | Literally one of the best schools in the world <br> Amazing people |
 | Amherst College | 234 <br> 450 | Large | Need Blind LAC <br> Amazing Courses <br> One of the best Liberal Arts Colleges <br> #2 national Liberal Arts College |
 | Columbia University | 200 | Large | New york, maaan <br> Amazing School |
+
+
+# The functions
+
+1. `set_all_rows`
+
+```python
+def set_all_rows(directory):
+    """
+        input: given a directory name
+        output: the code will take all the csv files inside the directory and turn every row into a dictionary and append that to a list. Then the list will be returned
+    """
+    all_rows = []
+    for file in os.listdir(directory):
+        filename = os.fsdecode(file)
+        if filename.endswith('.csv'):
+            file_path = os.path.join(directory,filename)
+            csv_file = csv.DictReader(open(file_path))
+            for row in csv_file:
+                all_rows.append(row)
+    return all_rows
+```
+
+2. `filter_rows`
+
+```python
+def filter_rows(rows, all_columns, main_column):
+    """
+        input: initial rows, all columns that need to be scrapped, and the main column based on which the rows will be filtered
+        output: a list of filtered dictionary
+    """
+    filtered_rows = []
+    for entry in rows:
+        already_in = False
+        for cols in filtered_rows:
+            if cols[main_column] == entry[main_column]:
+                # already in the list
+                already_in = True
+                for current_column in all_columns:
+                    if current_column in cols and current_column in entry and cols[current_column] != entry[current_column]:
+                        cols[current_column] += '\n\n'+entry[current_column]
+                    else:
+                        continue
+        if already_in == False:
+            filtered_rows.append(entry)
+        # print(already_in)
+    return filtered_rows
+```
+
+3. `generate_csv_from_data`
+
+```python
+def generate_csv_from_data(output_csv_file, csv_columns, dict_data):
+    """
+        input: output csv file name, all the columns that need to be written, the list of the dictionaries
+        output: it'll write a csv named output_csv_file and write all the data there
+    """
+    try:
+        with open(output_csv_file, 'w', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+            writer.writeheader()
+            for data in dict_data:
+                writer.writerow(data)
+        print("done..")
+    except IOError:
+        print("I/O error")
+```
