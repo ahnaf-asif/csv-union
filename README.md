@@ -16,7 +16,7 @@ Given a bunch of CSV files inside a directory, the code will be able to take all
 
 * `filter_all_rows` will take 3 parameters, initially scrapped list (in this case the `row` variable), The columns you need to consider, and the main column that'll be used to filter the rows. So, suppose your `main_column` name is 'University'. Now, if two rows have exactly the same University, only one entry will be pushed. Any duplicates will be ignored. And if any column of this two entries have different entries, it'll store those entries with a newline. The following example should clarify everything.
 
-### Imagine these are the initial rows 
+### Imagine these are the initial rows and you want to filter the rows by University
 
 | University      | People      | Size  | Good Stuff                                     |
 | --------------- | ----------- | ----- | ---------------------------------------------- |
@@ -24,6 +24,10 @@ Given a bunch of CSV files inside a directory, the code will be able to take all
 | Stanford University        | 4900        | Large | Amazing people                                 |
 | Amherst College | 234 | Large | Need Blind LAC |
 | Amherst College | 450 | Large | Amazing Courses |
+| Columbia University | 200 | Large | New york, maaan |
+| Amherst College | 234 | Large | One of the best Liberal Arts Colleges <br> #2 national Liberal Arts College |
+| Amherst College | 450 | Large | Amazing Courses |
+| Columbia University | 200 | Large | Amazing School |
 
 
 ### After running filter_all_rows, the above spreadsheet will look like this:
@@ -31,4 +35,5 @@ Given a bunch of CSV files inside a directory, the code will be able to take all
 | University      | People      | Size  | Good Stuff                                     |
 | --------------- | ----------- | ----- | ---------------------------------------------- |
 | Stanford University       | 4990        | Large | Literally one of the best schools in the world <br> Amazing people |
-| Amherst College | 234 <br> 450 | Large | Need Blind LAC <br> Amazing Courses |
+| Amherst College | 234 <br> 450 | Large | Need Blind LAC <br> Amazing Courses <br> One of the best Liberal Arts Colleges <br> #2 national Liberal Arts College |
+| Columbia University | 200 | Large | New york, maaan <br> Amazing School |
