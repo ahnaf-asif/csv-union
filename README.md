@@ -27,7 +27,7 @@ After finishing all the modifications, open a terminal/cmd and go to the root di
 
 # Example
 
-### Imagine these are the initial rows and you want to filter the rows by University
+### Imagine these are the initial rows and you want to filter the rows by **University** Column
 
 | University      | People      | Size  | Good Stuff                                     |
 | --------------- | ----------- | ----- | ---------------------------------------------- |
